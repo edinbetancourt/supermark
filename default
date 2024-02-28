@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name docker;
+
+    location / {
+        proxy_pass http://localhost:8000;
+        proxy_set_header Host $host;
+    }
+
+    location /static {
+        autoindex on;
+        alias /app/static/;
+    }
+}
