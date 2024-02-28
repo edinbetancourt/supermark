@@ -26,19 +26,23 @@ git clone https://github.com/edinbetancourt/supermark.git
 Configuracion:
 
 python -m venv venv
+
 ./venv/scripts/activate
+
 pip install -r requirements.txt
 
 Probar la APP:
 
 python manage.py runserver
 
-Abrir en el navegador el swagger: 
+Abrir en el navegador el swagger:
+
 http://localhost:8000/doc/schema/swagger-ui/
 
 Probar los endpoint:
 
 GET /test/v1/getpassword    Muestra la contraseña derivada del archivo keylog.txt
+
 GET /test/v1/showkeys       Muestra el listado de cada una de las key desde el archivo
 
 Crear el Docker:
@@ -49,6 +53,8 @@ Iniciar el Docker:
 
 docker run -p 8000:8000 -td supermark
 
+
+Fin.
 
 
 
