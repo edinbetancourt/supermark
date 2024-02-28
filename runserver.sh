@@ -1,3 +1,3 @@
 #!/bin/sh
 service nginx start
-gunicorn project.wsgi
+gunicorn -w 4 -b 0.0.0.0 project.wsgi
