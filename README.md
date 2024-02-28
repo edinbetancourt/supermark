@@ -51,7 +51,11 @@ docker buildx build -t supermark .
 
 Iniciar el Docker:
 
-docker run -p 8000:8000 -td supermark
+docker run -p 8000:80 -td supermark
+
+Abrir en el navegador el swagger:
+
+http://localhost:8000/doc/schema/swagger-ui/
 
 
 Fin.
