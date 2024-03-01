@@ -19,7 +19,8 @@ class DerivePassword:
                 number = []
                 for key in file:
                     key = key.strip()
-                    number.insert(0, key)
+                    # number.insert(0, key)
+                    number.append(key)
 
                 for key in number:
                     digit = key
