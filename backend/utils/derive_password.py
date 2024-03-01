@@ -9,19 +9,26 @@ class DerivePassword:
     def get_password(self):
         """ Build the password """
 
-        print(self.keylog_file)
-
-
         password = ''
 
         try:
-            with open(self.keylog_file, "r") as file:
-                for content in file:
-                    key = content.strip()
 
-                    # Build the password
-                    if not key in password:
-                        password = password + key
+            with open(self.keylog_file, "r") as file:
+                
+                # New code
+                number = []
+                for key in file:
+                    key = key.strip()
+                    number.insert(0, key)
+
+                for key in number:
+                    digit = key
+
+                    for value in digit:
+
+                        # Build the password
+                        if not value in password:
+                            password = password + value
 
                 return password
 
